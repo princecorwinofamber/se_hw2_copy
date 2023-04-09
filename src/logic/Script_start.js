@@ -1,14 +1,13 @@
 // Get canvas and context elements
-import Initializer from "./Init_PLUG.js";
-export var cvs;
-export var ctx;
-export var cell;
-export var cellObstructed;
-export var cellRed;
-export var cellBlack;
-export var simulator;
+var cvs;
+var ctx;
+var cell;
+var cellObstructed;
+var cellRed;
+var cellBlack;
+var simulator;
 
-export var bugBlack = [];
+var bugBlack = [];
 
 if (typeof document !== 'undefined') {
     cvs = document.getElementById("canvas");

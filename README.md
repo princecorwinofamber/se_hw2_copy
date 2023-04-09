@@ -1,3 +1,13 @@
+# pair29_sprint2
+
+Programmers:
+- Andrey Kovalevskiy
+- Alexander Kovrigin
+
+### What have been implemented
+- Supported broswer versions released before 2017 by changing js modules to the classic script loading system
+
+
 # pair29_sprint1
 
 link on clamv:

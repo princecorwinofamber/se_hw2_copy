@@ -1,4 +1,4 @@
-export default class StateMachine {
+class StateMachine {
     constructor(instructions, bug) {
         this.currentInstruction = 0;
         this.bug = bug;

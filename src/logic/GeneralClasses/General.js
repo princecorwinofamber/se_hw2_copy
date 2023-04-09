@@ -1,6 +1,4 @@
-import {assert} from "../../utils/Assertions.js";
-
-export class Color {
+class Color {
     static Red = new Color('Red');
     static Black = new Color('Black');
 
@@ -18,7 +16,7 @@ export class Color {
 Object.freeze(Color);
 
 // Defining the CellCondition class
-export class CellCondition {
+class CellCondition {
     // Constructor function of the class
     constructor(name, markerType = -1) {
         // Setting the name property
@@ -32,12 +30,12 @@ export class CellCondition {
 }
 
 // Defining a function to generate a random integer
-export function getRandomInt(max) {
+function getRandomInt(max) {
     return Math.floor(Math.random() * (max + 1));
 }
 
 // Defining a function to read a text file
-export function readTextFile(filePath) {
+function readTextFile(filePath) {
     // Creating a new XMLHttpRequest object
     let rawFile = new XMLHttpRequest();
     // Opening the file using a GET request

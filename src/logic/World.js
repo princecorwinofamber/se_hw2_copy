@@ -1,11 +1,5 @@
-// Importing necessary modules
-import {assert} from '../utils/Assertions.js';
-import {CellCondition, Color} from './GeneralClasses/General.js';
-import Position from './GeneralClasses/Position.js';
-import {cell, cellBlack, cellObstructed, cellRed, ctx} from "./Script_start.js";
-
 // Defining the World class
-export default class World {
+class World {
     constructor(width, height, cells) {
         this.width = width; // Setting the width of the World
         this.height = height; // Setting the height of the World

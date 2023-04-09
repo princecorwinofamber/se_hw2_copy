@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <script src="./src/utils/Assertions.js"></script>
+    <script src="./src/logic/GeneralClasses/Position.js"></script>
+    <script src="./src/logic/GeneralClasses/General.js"></script>
+    <script src="./src/logic/Asembler/Instruction.js"></script>
+    <script src="./src/logic/Asembler/StateMachine.js"></script>
+    <script src="./src/logic/Asembler/SimpleAssembler.js"></script>
+    <script src="./src/logic/World.js"></script>
+    <script src="./src/logic/Entities/Bug.js"></script>
+    <script src="./src/logic/Entities/Cell.js"></script>
+    <script src="./src/logic/Simulator.js"></script>
+    <script src="./src/logic/Plugs/MapLoader_PLUG.js"></script>
+    <script src="./src/logic/Init_PLUG.js"></script>
     <title>Title</title>
 
 
-    <link rel="stylesheet" href="ui/options_style.css">
+    <link rel="stylesheet" href="./ui/options_style.css">
 </head>
 <body>
 <div class="files-container">
@@ -33,6 +45,6 @@
     <script>
         document.getElementById("NextButton").addEventListener("click", function() { window.open("board.html");});
     </script>
-    <script type="module" src="src/logic/Script_options.js"></script>
+    <script src="./src/logic/Script_options.js"></script>
 </body>
 </html>

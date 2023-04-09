@@ -1,12 +1,9 @@
-import Cell from "../Entities/Cell.js";
-import {Color, readTextFile} from "../GeneralClasses/General.js";
-
 // Defining the MapLoader class
-export default class MapLoader {
+class MapLoader {
     // Constructor function of the class
-    constructor(filePath) {
+    constructor(mapText) {
         // Reading the file at the given file path and splitting it into an array of lines
-        let text = readTextFile(filePath)
+        let text = mapText;
         let sep = text.indexOf("\r") >= 0 ? "\r\n" : "\n";
         let map = text.split(sep)
         // Initializing the cells array

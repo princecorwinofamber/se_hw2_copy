@@ -1,10 +1,4 @@
-import {assert} from "../../utils/Assertions.js";
-import {assertStringShouldBeInt} from "../../utils/Assertions.js";
-import {assertDir} from "../../utils/Assertions.js";
-import {assertMarker} from "../../utils/Assertions.js";
-import {CellCondition, getRandomInt} from "../GeneralClasses/General.js";
-
-export default class Instruction {
+class Instruction {
     constructor(codeLine, world, commandNumber) {
         this.commandNumber = "[" + commandNumber + "]";
         this.words = codeLine.replace(/;.*/, '');

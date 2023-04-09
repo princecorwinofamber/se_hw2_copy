@@ -1,9 +1,4 @@
-import {assert} from '../../utils/Assertions.js';
-import {CellCondition, Color} from "../GeneralClasses/General.js";
-import Bug from "./Bug.js";
-
-
-export default class Cell {
+class Cell {
     constructor(obstructed = false, food = 0, isBase = false, baseColor = null) {
         this.obstructed = obstructed;
         this.food = food;

@@ -1,16 +1,11 @@
-import Bug from "./Entities/Bug.js";
-import {Color} from "./GeneralClasses/General.js";
-import {ctx, cvs} from "./Script_start.js";
-import SimpleAssembler from "./Asembler/SimpleAssembler.js";
-
-export var world_map = "../../maps/map0";
-export var bug_brain_1 = "../../bugScripts/bugBrainStupid";
-export var bug_brain_2 = "../../bugScripts/bugBrainStupid";
-export var number_of_iter;
-export var logging_bool;
+var world_map = "../../maps/map0";
+var bug_brain_1 = "../../bugScripts/bugBrainStupid";
+var bug_brain_2 = "../../bugScripts/bugBrainStupid";
+var number_of_iter;
+var logging_bool;
 
 // Define Simulator class
-export default class Simulator {
+class Simulator {
 
     constructor(world) {
         // Initialize empty bugs array and assign world object

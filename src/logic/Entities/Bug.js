@@ -1,11 +1,5 @@
-import {assert} from '../../utils/Assertions.js';
-import {Color, getRandomInt} from '../GeneralClasses/General.js';
-import Position from '../GeneralClasses/Position.js';
-import {bugBlack, ctx} from "../Script_start.js";
-import StateMachine from "../Asembler/StateMachine.js";
-
 const DEFAULT_RESTING = 14;
-export default class Bug {
+class Bug {
     static curId = 0;
 
     constructor(color, xPos, yPos, world, instructions) {

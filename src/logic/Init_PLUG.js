@@ -1,17 +1,23 @@
-// Import required modules
-import World from "./World.js";
-import MapLoader from "./Plugs/MapLoader_PLUG.js";
-import Simulator, {world_map} from "./Simulator.js";
-import SimpleAssembler from "./Asembler/SimpleAssembler.js";
-import {ctx, bugBlack} from "./Script_start.js"
-
-
+// default map
+const defaultMap = 
+"10\n" +
+"10\n" +
+"# # # # # # # # # #\n" +
+"# 9 9 . . . . 3 3 #\n" +
+"# 9 # . - - - . - # #\n" +
+"# . # - - - - - - #\n" +
+"# . . 5 - - - - - #\n" +
+"# + + + + + 5 . . #\n" +
+"# + + + + + + # . #\n" +
+"# + + + + + . # 9 #\n" +
+"# 3 3 . . . . 9 9 #\n" +
+"# # # # # # # # # #";
 
 // Define Initializer class
-export default class Initializer {
+class Initializer {
     constructor() {
         // Load map and create world object
-        let mapLoader = new MapLoader(world_map);
+        let mapLoader = new MapLoader(defaultMap);
         let world = new World(mapLoader.width, mapLoader.height, mapLoader.cells);
         // Set the last simulation cycle time
         this.last = Date.now();

@@ -1,0 +1,14 @@
+body {
+    background-color: #4a4a4a;
+}
+
+#greeting {
+    text-align: center;
+}
+
+#StartButton {
+    display: block;
+    margin: 50px auto auto;
+    font-size: 24px;
+    padding: 16px;
+}

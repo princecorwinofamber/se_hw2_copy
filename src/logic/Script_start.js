@@ -8,6 +8,7 @@ var cellBlack;
 var simulator;
 
 var bugBlack = [];
+var bugRed = [];
 
 if (typeof document !== 'undefined') {
     cvs = document.getElementById("canvas");

@@ -14,18 +14,30 @@ class Bug {
         this.direction = 0;
         this.hasFood = false;
         this.instructionPos = 0;
-        this.stateMachine = new StateMachine(instructions, this)
+        this.stateMachine = new StateMachine(instructions, this);
     }
 
     drawBug() {
-        if (this.position.y % 2 === 0) {
-            ctx.drawImage(bugBlack[this.direction], this.position.x * 50 + 16 - (bugBlack[this.direction].width - 32) / 2,
-                this.position.y * 44 + 16 - (bugBlack[this.direction].height - 32) / 2, bugBlack[this.direction].width,
-                bugBlack[this.direction].height);
+        if (this.color == Color.Black) {
+            if (this.position.y % 2 === 0) {
+                ctx.drawImage(bugBlack[this.direction], this.position.x * 50 + 16 - (bugBlack[this.direction].width - 32) / 2,
+                    this.position.y * 44 + 16 - (bugBlack[this.direction].height - 32) / 2, bugBlack[this.direction].width,
+                    bugBlack[this.direction].height);
+            } else {
+                ctx.drawImage(bugBlack[this.direction], this.position.x * 50 + 41 - (bugBlack[this.direction].width - 32) / 2,
+                    this.position.y * 44 + 16 - (bugBlack[this.direction].height - 32) / 2, bugBlack[this.direction].width,
+                    bugBlack[this.direction].height);
+            }
         } else {
-            ctx.drawImage(bugBlack[this.direction], this.position.x * 50 + 41 - (bugBlack[this.direction].width - 32) / 2,
-                this.position.y * 44 + 16 - (bugBlack[this.direction].height - 32) / 2, bugBlack[this.direction].width,
-                bugBlack[this.direction].height);
+            if (this.position.y % 2 === 0) {
+                ctx.drawImage(bugRed[this.direction], this.position.x * 50 + 16 - (bugRed[this.direction].width - 32) / 2,
+                    this.position.y * 44 + 16 - (bugRed[this.direction].height - 32) / 2, bugRed[this.direction].width,
+                    bugRed[this.direction].height);
+            } else {
+                ctx.drawImage(bugRed[this.direction], this.position.x * 50 + 41 - (bugRed[this.direction].width - 32) / 2,
+                    this.position.y * 44 + 16 - (bugRed[this.direction].height - 32) / 2, bugRed[this.direction].width,
+                    bugRed[this.direction].height);
+            }
         }
     }
 

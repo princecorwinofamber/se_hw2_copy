@@ -31,6 +31,11 @@ class Initializer {
             bugBlack[i] = new Image();
             bugBlack[i].src = "img/bugBlack" + (i + 1) % 6 + ".png";
         }
+        // Load red bug images
+        for (let i = 0; i < 6; i++) {
+            bugRed[i] = new Image();
+            bugRed[i].src = "img/bugRed" + (i + 1) % 6 + ".png";
+        }
     }
 
 

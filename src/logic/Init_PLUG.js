@@ -25,7 +25,7 @@ class Initializer {
         this.simulator = new Simulator(world);
         // Set font and color for context
         ctx.fillStyle = "#000";
-        ctx.font = "24px Verdana";
+        ctx.font = "20px Verdana";
         // Load black bug images
         for (let i = 0; i < 6; i++) {
             bugBlack[i] = new Image();

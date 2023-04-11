@@ -9,17 +9,52 @@ class World {
 
     // Drawing the cell at the given position with the given cell type
     drawCell(i, j, cellTyped, food = 0) {
+        let pos = new Position(j, i);
+        let blackMarkerText = "";
+        let redMarkerText = "";
+        for (let num = 0; num < 6; num++) {
+            if (this.isFriendlyMarkerAt(pos, Color.Red, num)) {
+                redMarkerText = redMarkerText + num.toString();
+            } else {
+                redMarkerText = redMarkerText + " ";
+            }
+            if (this.isFriendlyMarkerAt(pos, Color.Black, num)) {
+                blackMarkerText = blackMarkerText + num.toString();
+            } else {
+                blackMarkerText = blackMarkerText + " ";
+            }
+        }
         if (typeof document !== 'undefined') {
             if (i % 2 === 0) { // Checking if the row is even
                 ctx.drawImage(cellTyped, j * 50, i * 44, 64, 64); // Drawing the cell at the even position
+                // draw food if it is present in the cell
                 if (food > 0) {
-                    ctx.fillText(food.toString(), j * 50 + 22, i * 44 + 30);
+                    ctx.fillText(food.toString(), j * 50 + 24, i * 44 + 25);
                 }
+                // draw markers
+                let old_fillstyle = ctx.fillStyle;
+                ctx.font = "12px Verdana";
+                ctx.fillStyle = "#ff0000";
+                ctx.fillText(redMarkerText, j * 50 + 9, i * 44 + 35);
+                ctx.fillStyle = "#000";
+                ctx.fillText(blackMarkerText, j * 50 + 9, i * 44 + 46);
+                ctx.font = "20px Verdana";
+                ctx.fillStyle = old_fillstyle;
             } else {
                 ctx.drawImage(cellTyped, j * 50 + 25, i * 44, 64, 64); // Drawing the cell at the odd position
+                // draw food if it is present in the cell
                 if (food > 0) {
-                    ctx.fillText(food.toString(), j * 50 + 47, i * 44 + 30);
+                    ctx.fillText(food.toString(), j * 50 + 49, i * 44 + 25);
                 }
+                // draw markers
+                let old_fillstyle = ctx.fillStyle;
+                ctx.font = "12px Verdana";
+                ctx.fillStyle = "#ff0000";
+                ctx.fillText(redMarkerText, j * 50 + 34, i * 44 + 35);
+                ctx.fillStyle = "#000";
+                ctx.fillText(blackMarkerText, j * 50 + 34, i * 44 + 46);
+                ctx.font = "20px Verdana";
+                ctx.fillStyle = old_fillstyle;
             }
         }
     }

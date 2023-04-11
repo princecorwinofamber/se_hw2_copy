@@ -8,6 +8,7 @@ Programmers:
 - Supported broswer versions released before 2017 by changing js modules to the classic script loading system
 - Added support for drawing red bugs. Previously, all bugs were drawn black.
 - Fixed the bug where the bugs were created not in their nests, but in wrong cells.
+- Added support for drawing food
 
 
 # pair29_sprint1

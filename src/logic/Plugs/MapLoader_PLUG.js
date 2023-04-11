@@ -5,7 +5,7 @@ class MapLoader {
         // Reading the file at the given file path and splitting it into an array of lines
         let text = mapText;
         let sep = text.indexOf("\r") >= 0 ? "\r\n" : "\n";
-        let map = text.split(sep)
+        let map = text.split(sep);
         // Initializing the cells array
         this.cells = [];
         // TODO: insert assertions here
@@ -21,7 +21,7 @@ class MapLoader {
             this.cells[i] = [];
             for (let j = 0; j < this.width; j++) {
                 // Getting the cell value from the map array
-                let cell = map[i + 2][j]
+                let cell = map[i + 2][j];
                 // Creating a new cell object based on the cell value
                 switch (cell) {
                     case '#':

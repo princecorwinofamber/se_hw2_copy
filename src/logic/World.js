@@ -8,14 +8,19 @@ class World {
     }
 
     // Drawing the cell at the given position with the given cell type
-    drawCell(i, j, cellTyped) {
+    drawCell(i, j, cellTyped, food = 0) {
         if (typeof document !== 'undefined') {
             if (i % 2 === 0) { // Checking if the row is even
                 ctx.drawImage(cellTyped, j * 50, i * 44, 64, 64); // Drawing the cell at the even position
+                if (food > 0) {
+                    ctx.fillText(food.toString(), j * 50 + 22, i * 44 + 30);
+                }
             } else {
                 ctx.drawImage(cellTyped, j * 50 + 25, i * 44, 64, 64); // Drawing the cell at the odd position
+                if (food > 0) {
+                    ctx.fillText(food.toString(), j * 50 + 47, i * 44 + 30);
+                }
             }
-            
         }
     }
 
@@ -26,7 +31,7 @@ class World {
                 if (this.cells[i][j].obstructed) this.drawCell(i, j, cellObstructed)
                 else if (this.cells[i][j].baseColor === Color.Red) this.drawCell(i, j, cellRed)
                 else if (this.cells[i][j].baseColor === Color.Black) this.drawCell(i, j, cellBlack)
-                else this.drawCell(i, j, cell)
+                else this.drawCell(i, j, cell, this.getFoodAt(new Position(j, i)))
             }
         }
     }
